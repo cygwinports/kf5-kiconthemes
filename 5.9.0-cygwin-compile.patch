@@ -1,0 +1,10 @@
+--- origsrc/kiconthemes-5.9.0/src/tools/kiconfinder/kiconfinder.cpp	2015-04-04 07:06:16.000000000 -0500
++++ src/kiconthemes-5.9.0/src/tools/kiconfinder/kiconfinder.cpp	2015-04-28 17:20:24.143529100 -0500
+@@ -22,6 +22,7 @@
+ #include <QCommandLineParser>
+ #include <kiconloader.h>
+ #include <../kiconthemes_version.h>
++#include <stdio.h>
+ 
+ int main(int argc, char *argv[])
+ {

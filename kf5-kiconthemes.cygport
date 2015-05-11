@@ -1,0 +1,27 @@
+inherit kf5
+
+NAME="kf5-kiconthemes"
+VERSION=5.9.0
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE 5 icon theme library"
+DESCRIPTION="This library contains classes to improve the handling of icons
+in applications using the KDE Frameworks."
+
+PATCH_URI="5.9.0-cygwin-compile.patch"
+
+PKG_NAMES="libKF5IconThemes5 libKF5IconThemes-devel"
+libKF5IconThemes5_CONTENTS="
+	usr/bin/cygKF5IconThemes-5.dll
+	usr/bin/kiconfinder5.exe
+	usr/share/doc/
+	usr/share/locale/
+"
+libKF5IconThemes_devel_REQUIRES="libKF5ConfigWidgets-devel libKF5I18n-devel libKF5ItemViews-devel libKF5WidgetsAddons-devel libQt5Core-devel libQt5Gui-devel libQt5Svg-devel"
+libKF5IconThemes_devel_CONTENTS="
+	usr/include/KF5/KIconThemes/
+	usr/include/KF5/kiconthemes_version.h
+	usr/lib/cmake/KF5IconThemes/
+	${QT5_MKSPECSDIR#/}/modules/qt_KIconThemes.pri
+	usr/lib/libKF5IconThemes.dll.a
+"
